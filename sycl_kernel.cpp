@@ -1,4 +1,3 @@
-#include 
 
 using namespace sycl;
 

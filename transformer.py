@@ -32,7 +32,7 @@ def make_data(sentences):
 enc_inputs, dec_inputs, dec_outputs = make_data(sentences)
 
 print(enc_inputs, dec_inputs, dec_outputs)
-exit()
+# exit()
 
 #自定义数据集函数
 class MyDataSet(Data.Dataset):
@@ -230,7 +230,7 @@ model = Transformer().xpu()
 criterion = nn.CrossEntropyLoss(ignore_index=0)     #忽略 占位符 索引为0.
 optimizer = optim.SGD(model.parameters(), lr=1e-3, momentum=0.99)
 
-for epoch in range(50):
+for epoch in range(500):
     for enc_inputs, dec_inputs, dec_outputs in loader:         # enc_inputs : [batch_size, src_len]
                                                                # dec_inputs : [batch_size, tgt_len]
                                                                # dec_outputs: [batch_size, tgt_len]
